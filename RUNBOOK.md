@@ -33,7 +33,7 @@ Get-Location
 ## Fast setup (new PC, one command)
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\setup.ps1
+powershell -ExecutionPolicy Bypass -File .\setup.ps1 -LaunchAfterSetup
 ```
 
 What it does:
@@ -48,7 +48,7 @@ If you are on a brand-new PC, clone the GitHub repo first, then run the setup:
 ```powershell
 git clone https://github.com/jeffk5762/NHL-Highlights.git
 cd NHL-Highlights
-powershell -ExecutionPolicy Bypass -File .\setup.ps1
+powershell -ExecutionPolicy Bypass -File .\setup.ps1 -LaunchAfterSetup
 ```
 
 ---

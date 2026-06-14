@@ -27,6 +27,12 @@ py -m venv .venv
 .\.venv\Scripts\python.exe .\nhl_live_reaper_cues_Version11.py 2024020001 --from-start
 ```
 
+If you want setup to open the launcher after install, use:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\setup.ps1 -LaunchAfterSetup
+```
+
 ## 1) Open PowerShell in this folder
 
 `C:\Users\PROD A 1\OneDrive - The Walt Disney Company\NHL Py V11 This One`

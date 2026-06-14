@@ -1,5 +1,6 @@
 param(
-    [switch]$SkipImportCheck
+    [switch]$SkipImportCheck,
+    [switch]$LaunchAfterSetup
 )
 
 $ErrorActionPreference = 'Stop'
@@ -52,3 +53,17 @@ Write-Host 'Setup complete.' -ForegroundColor Green
 Write-Host 'Next steps:'
 Write-Host '1) In VS Code: Python: Select Interpreter -> .venv\Scripts\python.exe'
 Write-Host '2) Run: powershell -ExecutionPolicy Bypass -File .\Run-NHL-Cues.ps1'
+
+if ($LaunchAfterSetup) {
+    $launcherPath = Join-Path $PSScriptRoot 'Run-NHL-Cues.ps1'
+
+    if (Test-Path $launcherPath) {
+        Write-Host ''
+        Write-Host 'Launching Run-NHL-Cues.ps1...' -ForegroundColor Cyan
+        & powershell -ExecutionPolicy Bypass -File $launcherPath
+    }
+    else {
+        Write-Host ''
+        Write-Host 'Launch requested, but Run-NHL-Cues.ps1 was not found.' -ForegroundColor Yellow
+    }
+}
