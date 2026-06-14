@@ -21,6 +21,12 @@ env/
 .DS_Store
 Thumbs.db
 
+# Workspace-local tooling and editor folders
+.specstory/
+.vscode/
+Microsoft VS Code/
+Reap Aodio/
+
 # Project runtime outputs
 nhl_cues_*.csv
 seen_*.json
