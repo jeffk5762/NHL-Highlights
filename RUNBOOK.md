@@ -43,6 +43,14 @@ What it does:
 3. Installs `requirements.txt`
 4. Verifies core imports
 
+If you are on a brand-new PC, clone the GitHub repo first, then run the setup:
+
+```powershell
+git clone https://github.com/jeffk5762/NHL-Highlights.git
+cd NHL-Highlights
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+```
+
 ---
 
 ## 2) Create `.venv` (first time on this PC)

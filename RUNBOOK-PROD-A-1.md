@@ -2,6 +2,31 @@
 
 This file keeps the exact setup and run commands so you can restart quickly on this or another PC.
 
+## GitHub on another PC
+
+1. Install Git and Python on the other PC.
+2. Clone the GitHub repo.
+
+```powershell
+git clone https://github.com/jeffk5762/NHL-Highlights.git
+cd NHL-Highlights
+```
+
+3. Create a new virtual environment on that PC.
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+4. Install dependencies and run.
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe .\nhl_live_reaper_cues_Version11.py 2024020001 --from-start
+```
+
 ## 1) Open PowerShell in this folder
 
 `C:\Users\PROD A 1\OneDrive - The Walt Disney Company\NHL Py V11 This One`
@@ -75,7 +100,8 @@ Generated in this same folder:
 
 ## Notes for another PC
 
-1. Let OneDrive finish syncing this folder.
-2. Recreate `.venv` on that PC (do not copy virtual env between machines).
-3. Run install from `requirements.txt`.
-4. Run script with the target game ID.
+1. Let OneDrive finish syncing this folder if you are opening the same OneDrive copy.
+2. If you are starting fresh, clone the GitHub repo instead of copying the folder.
+3. Recreate `.venv` on that PC, do not copy the virtual env between machines.
+4. Run install from `requirements.txt`.
+5. Run script with the target game ID.
